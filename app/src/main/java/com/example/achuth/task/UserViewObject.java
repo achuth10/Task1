@@ -3,6 +3,13 @@ package com.example.achuth.task;
 public class UserViewObject {
     String name, comment_text,comment_date;
 
+    public UserViewObject(String name, String comment_text, String comment_date) {
+        this.name=name;
+        this.comment_date=comment_date;
+        this.comment_text=comment_text;
+
+    }
+
     public String getName() {
         return name;
     }
