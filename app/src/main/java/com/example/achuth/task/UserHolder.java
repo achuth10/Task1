@@ -12,11 +12,11 @@ public class UserHolder extends RecyclerView.ViewHolder {
         comment=(TextView)itemView.findViewById(R.id.comment);
         commentdate=(TextView)itemView.findViewById(R.id.commentdate);
     }
-    public void setDetails(UserViewObject userViewObject)
+    public void setDetails(UserComment userViewObject)
     {
         name.setText(userViewObject.getName());
-        comment.setText(userViewObject.getComment_text());
-        commentdate.setText(userViewObject.getComment_date());
+        comment.setText(userViewObject.getCommenttext());
+        commentdate.setText(" " +userViewObject.getDate());
 
     }
 

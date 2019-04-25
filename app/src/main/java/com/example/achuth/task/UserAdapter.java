@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class UserAdapter extends RecyclerView.Adapter <UserHolder> {
     private Context context;
-    private ArrayList <UserViewObject> userViewObjects;
-    public UserAdapter(Context context, ArrayList<UserViewObject> userViewObjects)
+    private ArrayList <UserComment> userViewObjects;
+    public UserAdapter(Context context, ArrayList<UserComment> userViewObjects)
     {
         this.context=context;
         this.userViewObjects=userViewObjects;
@@ -26,7 +26,7 @@ public class UserAdapter extends RecyclerView.Adapter <UserHolder> {
 
 
     public void onBindViewHolder( UserHolder userHolder, int i) {
-        UserViewObject userViewObject=userViewObjects.get(i);
+        UserComment userViewObject=userViewObjects.get(i);
         userHolder.setDetails(userViewObject);
     }
 
