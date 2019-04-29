@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         UserCommentArrayList.add(contact.getValue(UserComment.class));
                         System.out.println(contact.getValue(UserComment.class).getName());
                     }
+                    Toast.makeText(getApplicationContext(),"Database changed ,refreshing",Toast.LENGTH_SHORT).show();
                     createListData();
                 }
                 @Override
